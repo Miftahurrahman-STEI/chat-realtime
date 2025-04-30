@@ -22,3 +22,14 @@
         </div>
     </div>
 </x-app-layout>
+
+@section('scripts')
+
+<script>
+    import { getMessaging, getToken } from "firebase/messaging";
+    
+    const messaging = getMessaging();
+    getToken(messaging, {vapidKey: "BFXDjrp2-7kfeA4MY8cUUu5Ud-jxZAA-xtEeYkGlS5grAoEkPhzvMBaWmVnsJcYrMgD__MYvpX_A2uTT3-9QVJQ"});
+</script>
+
+@endsection

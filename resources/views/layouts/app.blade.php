@@ -11,7 +11,24 @@
         <link rel="preconnect" href="https://fonts.bunny.net">
         <link href="https://fonts.bunny.net/css?family=figtree:400,500,600&display=swap" rel="stylesheet" />
 
-        <!-- Scripts -->
+        <!-- Firebase -->
+        <script type="module">
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/11.6.1/firebase-app.js";
+        // TODO: Add SDKs for Firebase products that you want to use
+        // https://firebase.google.com/docs/web/setup#available-libraries
+
+        const firebaseConfig = {
+            apiKey: "AIzaSyC57-EsK09n1-BAQXJkrfsG9h-GkywWgtA",
+            authDomain: "realtime-chat-187f6.firebaseapp.com",
+            projectId: "realtime-chat-187f6",
+            storageBucket: "realtime-chat-187f6.firebasestorage.app",
+            messagingSenderId: "461971880460",
+            appId: "1:461971880460:web:b88d29ac93e37a25270c29"
+        };
+
+        const app = initializeApp(firebaseConfig);
+        </script>
+
         @vite(['resources/css/app.css', 'resources/js/app.js'])
     </head>
     <body class="font-sans antialiased">
@@ -32,5 +49,7 @@
                 {{ $slot }}
             </main>
         </div>
+
+        @yield('scripts')
     </body>
 </html>
